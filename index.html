@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript JSON</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h2>JavaScript Object Notaion</h2>
+
+    <script>
+        const person = {
+            name:'Mojibur Rahman',
+            age:'26',
+            address:"Shantidhara R/A 89,B/Gha , Feni"
+        }
+
+        const persongJson = JSON.stringify(person);
+        console.log(persongJson);
+
+        // অবজেক্ট কে আমরা Json string  এ কনভার্ট করেছি।
+
+        const personParse = JSON.parse(persongJson);
+        console.log(personParse);
+
+        //  Json string কে আবার অবজেক্ট এ কনভার্ট করেছি
+    </script>
+</body>
+</html>

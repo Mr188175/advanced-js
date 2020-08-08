@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json placeholder</title>
+</head>
+<body>
+    <ul id="object-name">
+
+    </ul>
+
+
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(json => getUserName(json))
+
+        function getUserName(users) {
+            const userNames = users.map(user => user.username);
+            const ul = document.getElementById("object-name")
+            for (let i = 0; i < userNames.length; i++) {
+                const username = userNames[i];
+                const li = document.createElement("li");
+                li.innerText = username;
+                ul.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- আমরা শিখলাম কিভাবে json এর মাধ্যমে আমরা কোন অবজেক্ট এর ভ্যালু কে ওয়েবসাইটে এক্সেস করতে পারি।  -->

@@ -28,3 +28,10 @@ console.log(output);
  আমরা চাইলে var দিয়ে যে value সেট করেছি তা বিভিন্ন ফাংশন এও ব্যবহার করতে পারবো।
 
  */
+
+ if('false') {
+     console.log("I am not false");
+ }
+ else {
+     console.log("I am false");
+ }
